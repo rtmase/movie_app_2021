@@ -109,28 +109,35 @@ Food.prototype = {
  *  component가 죽을때
  */
 class App extends React.Component{
-  state = {
-    count: 0
-  }
-  render(){
+  // state = {
+  //   count: 0
+  // }
+  // render(){
     
-    return <div>
-      <h1>the number is {this.state.count}</h1>
-      <button onClick={this.add}>Add</button>
-      <button onClick={this.minus}>Minus</button>
-    </div>      
-  }
-  add = () => {
-    //현재 이 코드는 좋은 코드는 아님 state에 의존하고 있고 몇가지 성능 문제가 있음.
-    //this.setState({count:this.state.count + 1});
-    //이 방법이 state를 set할 때, react에서 외부의 상태에 의존하지 않는 가장 좋은 방법
-    this.setState(current => ({count:current.count + 1}));
+  //   return <div>
+  //     <h1>the number is {this.state.count}</h1>
+  //     <button onClick={this.add}>Add</button>
+  //     <button onClick={this.minus}>Minus</button>
+  //   </div>      
+  // }
+  // add = () => {
+  //   //현재 이 코드는 좋은 코드는 아님 state에 의존하고 있고 몇가지 성능 문제가 있음.
+  //   //this.setState({count:this.state.count + 1});
+  //   //이 방법이 state를 set할 때, react에서 외부의 상태에 의존하지 않는 가장 좋은 방법
+  //   this.setState(current => ({count:current.count + 1}));
 
-  };
-  minus = () => {
-    //this.setState({count:this.state.count - 1});
-    this.setState(current => ({count:current.count - 1}));
-  };
+  // };
+  // minus = () => {
+  //   //this.setState({count:this.state.count - 1});
+  //   this.setState(current => ({count:current.count - 1}));
+  // };
+  state = {
+    isLoading : true
+  }
+  render() {
+    return <div>{}</div>
+  }
+
 }
 
 export default App;
